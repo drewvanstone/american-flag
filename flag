@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Reset text to normal
+r=$(tput sgr0)
+
+# Make text bold, blue background, and white foreground
+stars=$(tput bold; tput setab 4; tput setaf 7)
+
+# Reset text, red background, red foreground
+red=$(tput sgr0; tput setab 1; tput setaf 1)
+
+# Reset text, white background, white foreground
+white=$(tput sgr0; tput setab 7; tput setaf 7)
+
+# Print. Just saving some line space
+p() {
+ echo -e "${@}"
+}
+
+# Could make lines functions, but this view is more readable
+echo
+p "${r}  ${stars} * * * * * * * * * * ${red}███████████████████████████████"
+p "${r}  ${stars}  * * * * * * * * *  ${white}███████████████████████████████"
+p "${r}  ${stars} * * * * * * * * * * ${red}███████████████████████████████"
+p "${r}  ${stars}  * * * * * * * * *  ${white}███████████████████████████████"
+p "${r}  ${stars} * * * * * * * * * * ${red}███████████████████████████████"
+p "${r}  ${stars}  * * * * * * * * *  ${white}███████████████████████████████"
+p "${r}  ${stars} * * * * * * * * * * ${red}███████████████████████████████"
+p "${r}  ${white} ███████████████████████████████████████████████████"
+p "${r}  ${red} ███████████████████████████████████████████████████"
+p "${r}  ${white} ███████████████████████████████████████████████████"
+p "${r}  ${red} ███████████████████████████████████████████████████"
+p "${r}  ${white} ███████████████████████████████████████████████████"
+p "${r}  ${red} ███████████████████████████████████████████████████"
+echo 
